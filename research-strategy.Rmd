@@ -1,0 +1,59 @@
+---
+output: 
+   pdf_document: 
+      template: template.tex
+      keep_tex: true
+geometry: margin=.5in
+mainfont: Arial
+fontsize: 11pt
+latex_engine: xelatex
+---
+
+# Research Strategy
+
+## Significance
+
+**Important significance topic.** 
+`r paste(stringi::stri_rand_lipsum(2, start_lipsum = FALSE), collapse = "\n\n")`
+
+**Another important significance topic.** 
+`r paste(stringi::stri_rand_lipsum(2, start_lipsum = FALSE), collapse = "\n\n")`
+
+## Innovation
+
+A descriptive paragraph or two.
+
+* Some bullets may be helpful to the reviewers here.
+* Some bullets may be helpful to the reviewers here.
+
+## Approach
+
+### Overview of the proposal
+`r paste(stringi::stri_rand_lipsum(2, start_lipsum = FALSE), collapse = "\n\n")`
+
+### A multidisciplinary research team
+`r paste(stringi::stri_rand_lipsum(2, start_lipsum = FALSE), collapse = "\n\n")`
+
+### Preliminary studies
+`r paste(stringi::stri_rand_lipsum(1, start_lipsum = FALSE), collapse = "\n\n")`
+1. `r paste(stringi::stri_rand_lipsum(2, start_lipsum = FALSE), collapse = "\n\n")`
+1. `r paste(stringi::stri_rand_lipsum(1, start_lipsum = FALSE), collapse = "\n\n")`
+1. `r paste(stringi::stri_rand_lipsum(2, start_lipsum = FALSE), collapse = "\n\n")`
+
+### Resources
+`r paste(stringi::stri_rand_lipsum(2, start_lipsum = FALSE), collapse = "\n\n")`
+
+### Design and methods for Aim 1
+`r paste(stringi::stri_rand_lipsum(2, start_lipsum = FALSE), collapse = "\n\n")`
+
+### Design and methods for Aim 2
+`r paste(stringi::stri_rand_lipsum(2, start_lipsum = FALSE), collapse = "\n\n")`
+
+### Design and methods for Aim 3
+`r paste(stringi::stri_rand_lipsum(2, start_lipsum = FALSE), collapse = "\n\n")`
+
+### Rigor and reproducibility
+`r paste(stringi::stri_rand_lipsum(2, start_lipsum = FALSE), collapse = "\n\n")`
+
+### Impact of the proposed study
+`r paste(stringi::stri_rand_lipsum(1, start_lipsum = FALSE), collapse = "\n\n")`
