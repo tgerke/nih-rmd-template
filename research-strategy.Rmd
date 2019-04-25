@@ -3,6 +3,7 @@ output:
    pdf_document: 
       template: template.tex
       keep_tex: true
+      number_sections: true
 geometry: margin=.5in
 mainfont: Arial
 fontsize: 11pt
@@ -51,6 +52,9 @@ A descriptive paragraph or two.
 
 ### Design and methods for Aim 3
 `r paste(stringi::stri_rand_lipsum(2, start_lipsum = FALSE), collapse = "\n\n")`
+
+### Timeline
+There are lots of good examples of `R`-based Gantt charts to be found by clever Googling. For displaying progress with sidebar annotations by aim, I particularly like [\underline{this}](https://datascienceplus.com/visualize-your-cvs-timeline-with-r-gantt-style/) example from the [\underline{lares}](https://github.com/laresbernardo/lares) package.  
 
 ### Rigor and reproducibility
 `r paste(stringi::stri_rand_lipsum(2, start_lipsum = FALSE), collapse = "\n\n")`

@@ -254,6 +254,22 @@ $endfor$
 % personal preamble edits here
 %%%%%%%%%%
 \pagenumbering{gobble}
+
+% change section title styling
+\usepackage{sectsty}
+\sectionfont{\normalsize\bf\uppercase}
+\subsectionfont{\normalsize\bf}
+
+% set section numbering/lettering
+\makeatletter
+\def\@seccntformat#1{%
+  \expandafter\ifx\csname c@#1\endcsname\c@section\else
+  \csname the#1\endcsname\quad
+  \fi}
+\makeatother
+\renewcommand\thesubsection{\Alph{subsection}.}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
 %%%%%%%%%%
 
 \begin{document}
