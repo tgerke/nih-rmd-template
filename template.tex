@@ -261,8 +261,19 @@ $endfor$
 
 % change section title styling
 \usepackage{sectsty}
-\sectionfont{\normalsize\bf\uppercase}
-\subsectionfont{\normalsize\bf}
+\sectionfont{\normalfont\normalsize\bf\uppercase}
+\subsectionfont{\normalfont\normalsize\bf}
+% could help: https://latex.org/forum/viewtopic.php?f=44&t=7369
+% best: doing it with seccntformat: https://tex.stackexchange.com/questions/95896/how-to-format-subsection-title-without-packages
+
+% un-indent the section titles correct their padding
+% reduce spacing that appears above level 3 and 4 headings
+% \usepackage{titlesec}
+% \titleformat{\section}{\normalsize\bf\uppercase}
+% \titleformat{\subsection}{\normalsize\bf}
+% \titlespacing*{\section}{-1em}{0pt}{6pt}
+% \titlespacing*{\subsubsection}{0pt}{4pt}{0pt}
+% \titlespacing*{\paragraph}{0pt}{2pt}{1em}
 
 % set section numbering/lettering
 \makeatletter
@@ -278,13 +289,6 @@ $endfor$
 % reduce spacing at the top of lists
 \usepackage{enumitem}
 \setlist{topsep = 2pt}
-
-% un-indent the section titles correct their padding
-% reduce spacing that appears above level 3 and 4 headings
-% \usepackage{titlesec}
-% \titlespacing*{\section}{-1em}{0pt}{6pt}
-% \titlespacing*{\subsubsection}{0pt}{4pt}{0pt}
-% \titlespacing*{\paragraph}{0pt}{2pt}{1em}
 
 % allow text to wrap around figures
 \usepackage{graphicx}
