@@ -10,6 +10,7 @@ geometry: margin=.5in
 mainfont: Arial
 fontsize: 11pt
 indent: true
+bibliography: references.bib
 ---
 
 # Research Strategy
@@ -18,7 +19,7 @@ indent: true
 
 #### Important significance topic.
 
-`r paste(stringi::stri_rand_lipsum(2, start_lipsum = FALSE), collapse = "\n\n")`
+`r paste(stringi::stri_rand_lipsum(3, start_lipsum = FALSE), collapse = "\n\n")`
 
 #### Another important significance topic.
 `r paste(stringi::stri_rand_lipsum(2, start_lipsum = FALSE), collapse = "\n\n")`
@@ -35,7 +36,7 @@ A descriptive paragraph or two.
 ### Overview of the proposal
 `r paste(stringi::stri_rand_lipsum(2, start_lipsum = FALSE), collapse = "\n\n")`
 
-### A multidisciplinary research team
+### Research team
 `r paste(stringi::stri_rand_lipsum(2, start_lipsum = FALSE), collapse = "\n\n")`
 
 ### Preliminary studies

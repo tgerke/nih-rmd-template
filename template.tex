@@ -270,7 +270,14 @@ $endfor$
 \makeatother
 \renewcommand\thesubsection{\Alph{subsection}.}
 \renewcommand\thesubsubsection{\thesubsection\arabic{subsubsection}.}
-%\renewcommand\theparagraph{}
+
+% reduce spacing that appears above paragraphs (which are class 4 headings)
+\usepackage{titlesec}
+\titlespacing*{\paragraph}{0pt}{2pt}{1em}
+
+% reduce spacing at the top of lists
+\usepackage{enumitem}
+\setlist{topsep = 2pt}
 
 %%%%%%%%%%
 
