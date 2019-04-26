@@ -13,6 +13,22 @@ indent: true
 bibliography: references.bib
 ---
 
+<!-- a clever hack for wrapfig from https://stackoverflow.com/questions/54100806/r-markdown-how-do-i-make-text-float-around-figures -->
+```{r, include = F}
+defOut <- knitr::knit_hooks$get("plot")  # save the default plot hook 
+knitr::knit_hooks$set(plot = function(x, options) {  # set new plot hook ...
+  x <- defOut(x, options)  # first apply the default hook
+  if(!is.null(options$wrapfigure)) {  # then, if option wrapfigure is given ...
+    # create the new opening string for the wrapfigure environment ...
+    wf <- sprintf("\\begin{wrapfigure}{%s}{%g\\textwidth}", options$wrapfigure[[1]], options$wrapfigure[[2]])
+    x  <- gsub("\\begin{figure}", wf, x, fixed = T)  # and replace the default one with it.
+    x  <- gsub("{figure}", "{wrapfigure}", x, fixed = T)  # also replace the environment ending
+  }
+  return(x)
+})
+```
+
+
 # Research Strategy
 
 ## Significance
@@ -40,10 +56,22 @@ bibliography: references.bib
 `r paste(stringi::stri_rand_lipsum(2, start_lipsum = FALSE), collapse = "\n\n")`
 
 ### Preliminary studies
-`r paste(stringi::stri_rand_lipsum(1, start_lipsum = FALSE), collapse = "\n\n")`
-1. `r paste(stringi::stri_rand_lipsum(2, start_lipsum = FALSE), collapse = "\n\n")`
-1. `r paste(stringi::stri_rand_lipsum(1, start_lipsum = FALSE), collapse = "\n\n")`
-1. `r paste(stringi::stri_rand_lipsum(2, start_lipsum = FALSE), collapse = "\n\n")`
+`r paste(stringi::stri_rand_lipsum(4, start_lipsum = FALSE), collapse = "\n\n")`
+
+<!-- 
+\begin{wrapfigure}{R}{0.7\textwidth}
+
+\hfill{}\includegraphics[width=.7\textwidth]{image.pdf} 
+
+\caption{My Flowchart}\label{fig:unnamed-chunk-2}
+\end{wrapfigure}
+--> 
+
+```{r echo = F, warning = F, message = F, fig.width=7, fig.height = 6, out.width = ".3\\textwidth", fig.cap = "My Flowchart", fig.align="right", wrapfigure = list("R", .3)}
+plot(mpg ~ hp, data = mtcars)
+```
+
+
 
 ### Resources
 `r paste(stringi::stri_rand_lipsum(2, start_lipsum = FALSE), collapse = "\n\n")`
