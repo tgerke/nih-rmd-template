@@ -264,11 +264,13 @@ $endfor$
 \makeatletter
 \def\@seccntformat#1{%
   \expandafter\ifx\csname c@#1\endcsname\c@section\else
+  \expandafter\ifx\csname c@#1\endcsname\c@paragraph\else
   \csname the#1\endcsname\quad
-  \fi}
+  \fi\fi}
 \makeatother
 \renewcommand\thesubsection{\Alph{subsection}.}
-\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+\renewcommand\thesubsubsection{\thesubsection\arabic{subsubsection}.}
+%\renewcommand\theparagraph{}
 
 %%%%%%%%%%
 

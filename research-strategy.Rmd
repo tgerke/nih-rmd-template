@@ -4,20 +4,23 @@ output:
       template: template.tex
       keep_tex: true
       number_sections: true
+      latex_engine: xelatex
+      citation_package: natbib
 geometry: margin=.5in
 mainfont: Arial
 fontsize: 11pt
-latex_engine: xelatex
+indent: true
 ---
 
 # Research Strategy
 
 ## Significance
 
-**Important significance topic.** 
+#### Important significance topic.
+
 `r paste(stringi::stri_rand_lipsum(2, start_lipsum = FALSE), collapse = "\n\n")`
 
-**Another important significance topic.** 
+#### Another important significance topic.
 `r paste(stringi::stri_rand_lipsum(2, start_lipsum = FALSE), collapse = "\n\n")`
 
 ## Innovation
