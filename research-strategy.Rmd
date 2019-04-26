@@ -26,10 +26,10 @@ bibliography: references.bib
 
 ## Innovation
 
-A descriptive paragraph or two.
+`r paste(stringi::stri_rand_lipsum(1, start_lipsum = FALSE), collapse = "\n\n")`
 
 * Some bullets may be helpful to the reviewers here.
-* Some bullets may be helpful to the reviewers here.
+* Some bullets may be helpful to the reviewers here too.
 
 ## Approach
 

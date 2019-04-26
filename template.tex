@@ -271,13 +271,16 @@ $endfor$
 \renewcommand\thesubsection{\Alph{subsection}.}
 \renewcommand\thesubsubsection{\thesubsection\arabic{subsubsection}.}
 
-% reduce spacing that appears above paragraphs (which are class 4 headings)
-\usepackage{titlesec}
-\titlespacing*{\paragraph}{0pt}{2pt}{1em}
-
 % reduce spacing at the top of lists
 \usepackage{enumitem}
 \setlist{topsep = 2pt}
+
+% un-indent the section titles correct their padding
+% reduce spacing that appears above level 3 and 4 headings
+\usepackage{titlesec}
+\titlespacing*{\section}{-1em}{0pt}{6pt}
+\titlespacing*{\subsubsection}{0pt}{4pt}{0pt}
+\titlespacing*{\paragraph}{0pt}{2pt}{1em}
 
 %%%%%%%%%%
 
