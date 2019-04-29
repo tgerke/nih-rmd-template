@@ -54,29 +54,44 @@
 %\usepackage{helvet}
 %\renewcommand{\familydefault}{\sfdefault}
 
-% change section title styling
-\usepackage{sectsty}
-\sectionfont{\normalfont\normalsize\bf\uppercase}
-\subsectionfont{\normalfont\normalsize\bf}
-% could help: https://latex.org/forum/viewtopic.php?f=44&t=7369
-
 % un-indent the section titles correct their padding
 % reduce spacing that appears above level 3 and 4 headings
 % \usepackage{titlesec}
-% \titleformat{\section}{\normalsize\bf\uppercase}
-% \titleformat{\subsection}{\normalsize\bf}
+
 % \titlespacing*{\section}{-1em}{0pt}{6pt}
 % \titlespacing*{\subsubsection}{0pt}{4pt}{0pt}
 % \titlespacing*{\paragraph}{0pt}{2pt}{1em}
 
 % set section numbering/lettering
+% tips for seccntformat: https://tex.stackexchange.com/questions/95896/how-to-format-subsection-title-without-packages
 \makeatletter
 \def\@seccntformat#1{%
   \expandafter\ifx\csname c@#1\endcsname\c@section\else
   \expandafter\ifx\csname c@#1\endcsname\c@paragraph\else
   \csname the#1\endcsname\quad
   \fi\fi}
+  
+  % stucture for these commands: https://texfaq.org/FAQ-atsigns
+  \renewcommand\section{
+  \@startsection{section}{1}{\z@}
+    {-3.5ex \@plus -1ex \@minus -.2ex}
+    {1.0ex \@plus.2ex} %reduce space below section
+    {\normalfont\normalsize\bf\uppercase}} %modify font style
+    
+  \renewcommand\subsection{
+  \@startsection{subsection}{2}{\z@}
+    {-3.25ex\@plus -1ex \@minus -.2ex}
+    {1.5ex \@plus .2ex}
+    {\normalfont\normalsize\bf}} %modify font style
+    
+  \renewcommand\subsubsection{
+  \@startsection{subsubsection}{3}{\z@}
+    {-3.25ex\@plus -1ex \@minus -.2ex}
+    {1.5ex \@plus .2ex}
+    {\normalfont\normalsize\bf}} %modify font style
+    
 \makeatother
+
 \renewcommand\thesubsection{\Alph{subsection}.}
 \renewcommand\thesubsubsection{\thesubsection\arabic{subsubsection}.}
 
@@ -103,80 +118,76 @@
 \paragraph{Important significance
 topic.}\label{important-significance-topic.}}
 
-Vel ac, donec nunc fringilla dictum pretium, nulla luctus sit vivamus ac
-nulla finibus neque. Pulvinar, vulputate aliquet ut elementum leo.
-Facilisi himenaeos vel porta vel. Rutrum justo a laoreet ullamcorper
-dapibus nullam sed suscipit. Sed dis sed, donec magna ex ad magnis.
-Nulla convallis a a sed, conubia rutrum. Sit purus feugiat natoque
-vehicula nunc, mauris et. Imperdiet, consequat lectus sit curae at lorem
-sit, blandit sed? Tincidunt risus eros blandit magna himenaeos, maximus.
-Ut non mus egestas, id amet mauris luctus id nibh, nam scelerisque. Non
-tempus commodo, donec, vel senectus quam risus sed. At urna, sem dictum
-rhoncus nisl magna fringilla. Imperdiet nec rhoncus sapien lorem massa
-in sed inceptos. Ad sagittis, justo eu, condimentum. Ultrices vel vel
-vitae et risus neque. Dolor eget sem vel nec hac, interdum sit vel
-ornare elementum praesent eu. Nec mollis, vestibulum, justo himenaeos,
-in condimentum gravida tellus erat tempor, aenean metus metus.
+Faucibus id tortor non nisl elit non molestie. Urna mollis velit
+integer, tempus commodo ullamcorper volutpat posuere nunc. Molestie,
+ante senectus magna lacus turpis vehicula commodo. Metus nec suspendisse
+eget non sit eu tortor per. Dignissim arcu, aptent proin cum himenaeos
+vulputate neque. Felis eget, dictum sed maecenas, venenatis. Enim
+pretium sapien ac est per tempus at hac. Senectus et ultricies mauris ac
+egestas magna velit egestas aliquet. Quam blandit elementum fringilla,
+felis at nostra faucibus efficitur ligula etiam. Purus lobortis justo
+non netus praesent eu tempus urna quisque habitant ad. Mauris pretium
+nam curabitur leo leo proin tempor. Justo accumsan, eget ante sem
+pulvinar habitasse nulla rhoncus donec natoque. Vitae risus sapien at
+donec penatibus erat. Netus dis aliquam ipsum fringilla fringilla id ac
+dictum.
 
-Primis ut dolor sed. Ut natoque feugiat dignissim himenaeos magnis
-sodales. Quis viverra dictum, aliquet maximus. Eleifend mauris, litora,
-fusce mattis ante in. Eget platea class porta aliquam, imperdiet mi
-lectus. Duis gravida luctus, a, eu rutrum cubilia integer iaculis porta.
-Ac mi pellentesque penatibus. Laoreet, ipsum sit vehicula sed maximus.
-Vestibulum ipsum quis integer luctus morbi in in, imperdiet, habitant,
-eget ex a. Dapibus, purus leo faucibus fusce fermentum vulputate. Lorem
-sed blandit rutrum commodo. Amet class accumsan sed nec nec urna
-praesent in ornare ut sed metus himenaeos metus. Sit vitae lacinia ut eu
-ac.
+Ut purus amet sollicitudin vel, eget litora sagittis mus, sed. Donec
+ultricies arcu mattis hac diam, sed. Eu ut, sociosqu aliquam nostra
+dapibus. Cursus in consequat sed cubilia mauris mauris phasellus. Quam
+eros diam cubilia nam vestibulum. Odio aliquam egestas in ex vel, nisl
+tempor. Himenaeos orci fames volutpat, quam vitae nunc, lorem ut aliquam
+nec orci. Ultricies in massa sem scelerisque sed dictumst tortor, ut,
+efficitur. Consequat odio dignissim ipsum dui maecenas sed. Venenatis
+proin condimentum interdum purus eu nam velit erat.
 
-Justo sed in vel nec sollicitudin non praesent, amet ornare ac. Ut ex,
-etiam fermentum donec dui platea ipsum. Mauris, erat adipiscing pretium
-feugiat felis blandit, rutrum, in praesent. Egestas, etiam neque sit
-nascetur, venenatis accumsan commodo aenean dui. Bibendum ipsum ex
-convallis dignissim. Semper euismod natoque elementum nec pellentesque
-lacus. Mollis sed massa ac massa pretium. Elementum lacus duis at primis
-amet nulla pellentesque. Nostra vitae adipiscing fames in in nunc lorem
-justo. Velit, ullamcorper donec purus bibendum, ex est vitae nisl mi.
+Varius magna consectetur sem nisl in. Justo ac ad sollicitudin interdum
+ac. Platea maximus ut, ac mauris habitasse. Diam a aptent mollis etiam
+lacinia mi dolor commodo. Sagittis fermentum, morbi eget consectetur
+efficitur etiam, mauris rutrum. Lobortis blandit vestibulum nibh. Auctor
+sed sodales et arcu commodo sociis felis, mauris. Dui iaculis cursus
+ultrices a, cursus proin ultricies ut ante. Sollicitudin phasellus
+ullamcorper. Pulvinar sed, sed iaculis sit vitae.
 
 \hypertarget{another-important-significance-topic.}{%
 \paragraph{Another important significance
 topic.}\label{another-important-significance-topic.}}
 
-Consectetur mus at vel vestibulum at in eros. Maximus, nunc pellentesque
-ante eget sagittis arcu ut condimentum pulvinar penatibus. Neque
-ridiculus aliquam laoreet sed ut curae est, consectetur sollicitudin
-sed. Ut ligula adipiscing nulla vivamus id. Mattis id erat phasellus at
-et velit, id. Elit enim sed semper. Donec donec, ligula dapibus
-ullamcorper porta aenean, dictumst non ex. Auctor aliquam, ornare quis
-habitant. Sed nisl facilisis condimentum tristique risus porttitor
-libero. Sem dolor vulputate enim sed fermentum in in et. Risus non dis
-tempor velit nec risus suspendisse sociis. Blandit convallis sed fusce
-aptent senectus pellentesque porttitor a luctus. Arcu maecenas, volutpat
-sed, euismod, inceptos.
+Non convallis ad sed phasellus congue, sed senectus. Bibendum ornare
+quam in ac. Id cursus in vulputate volutpat varius lacinia nunc. Sed
+faucibus suspendisse semper potenti mi neque ultricies. Posuere urna sem
+hac. Leo, purus mi elementum, bibendum donec massa. Sed, scelerisque sed
+in laoreet, leo mauris hendrerit ut viverra sed. Vestibulum, tincidunt
+netus congue, commodo! Velit, ridiculus id quis lacus at dolor sit.
+Quisque vitae dolor ut turpis sed. Sed maecenas.
 
-Non sem cum porta, consequat venenatis nibh. Ut sed sed interdum eu
-viverra sed. Litora amet, purus sociis sed rhoncus semper quisque
-feugiat sagittis. Posuere sem ullamcorper, viverra est, magnis nec mi.
-Quam nunc rutrum diam ut diam fringilla mi. Nibh a sed volutpat nulla
-amet justo sed tincidunt maecenas non interdum tempus. Nec interdum
-fusce sapien senectus vestibulum vehicula amet. Commodo turpis dictumst
-sapien imperdiet nascetur, a euismod sit hendrerit. Vitae eleifend
-molestie lorem sit porttitor tempor. Felis, ipsum malesuada ut.
+Nisl quam vivamus in finibus sed hendrerit. In posuere ad varius in
+consequat blandit. Cras, tristique? Mi, eleifend ornare a maecenas
+tempor vestibulum eget, ullamcorper arcu dui sit phasellus, sapien.
+Pellentesque primis est elit massa. Blandit phasellus mus sed non, ut.
+Luctus pellentesque ante consectetur vivamus, pellentesque pellentesque.
+Lorem tellus eget ante maecenas. Proin molestie blandit. Et class ac
+feugiat donec facilisis arcu ultricies ut enim mus nunc sed risus
+scelerisque. Venenatis morbi interdum. Nullam tortor in at maximus
+nostra id erat. Ullamcorper fermentum vel phasellus quis facilisi
+dapibus. Sit blandit aliquet euismod? Venenatis ex habitant eu mollis
+finibus pretium.
 
 \hypertarget{innovation}{%
 \subsection{Innovation}\label{innovation}}
 
-Felis eu lacus laoreet eros, pellentesque vulputate mi vestibulum.
-Tristique lectus quis nisl placerat mauris lacus rhoncus fringilla ut
-ut. Class leo cras eget at, nullam, vehicula risus fringilla, non
-tortor. Gravida diam bibendum viverra, non lobortis mi eget. Sed
-facilisis tellus pellentesque iaculis quis sed accumsan orci nunc ac
-dictumst amet eget eget, magnis. In faucibus dapibus fringilla, mauris.
-At aenean dolor eleifend ad mus. Sed himenaeos sed, ac faucibus ad,
-netus ut est! Sed duis proin, dictumst dolor lorem laoreet malesuada id
-ac. Quis urna at mollis penatibus maximus. Etiam, dignissim vestibulum
-sed eu in. Eleifend eu eu cubilia quis. Dignissim ac et mauris sed
-tempus lorem.
+Sociis habitasse mauris tellus eget magna sed, viverra mauris, nullam.
+Ligula a cubilia velit consectetur tempor sed. Imperdiet id donec erat
+venenatis parturient, erat mauris. Lobortis venenatis proin consectetur
+enim semper nostra et ad ornare odio aenean interdum. Sollicitudin class
+tortor nulla non pretium et sagittis. Curae dapibus quis enim sed. Vel
+consequat penatibus a donec magna ridiculus id feugiat tincidunt mauris.
+Luctus suscipit sodales mus sociis quis volutpat mauris luctus, finibus.
+Vitae, sed varius dignissim, mattis consectetur tempor ut fringilla.
+Amet montes sociis. Cum at justo diam ligula quam odio risus. Imperdiet
+aliquam justo nascetur sapien. Per montes netus rhoncus dapibus nibh
+tempor. In feugiat aliquam at inceptos magna dolor ultricies nisl
+molestie ut.
 
 \begin{itemize}
 \tightlist
@@ -193,102 +204,82 @@ tempus lorem.
 \subsubsection{Overview of the
 proposal}\label{overview-of-the-proposal}}
 
-Consequat non viverra massa ipsum in in non, in at, nec ipsum ipsum. Non
-iaculis litora tincidunt cubilia mus viverra urna cursus maecenas.
-Tincidunt mollis dis quam neque erat in amet finibus litora porttitor,
-himenaeos sociosqu accumsan eros. Non gravida sed varius diam et tempus
-sit. Lacus class nibh, fermentum ut nullam non sapien a. Eleifend
-commodo, duis metus et imperdiet. Volutpat sed non amet, in sociosqu
-arcu duis odio neque sed. In id placerat lectus convallis. Praesent
-maecenas justo condimentum morbi ac torquent. Interdum neque quam metus
-et ultricies. Ultrices mauris leo nulla libero scelerisque lacus. Quam
-diam lacinia cum vitae nibh in eu.
+Class class faucibus diam auctor nulla diam, diam luctus tortor,
+pellentesque elementum. Sodales fringilla ex ac, egestas fringilla ut
+condimentum velit. Etiam erat nisl donec vitae lectus lobortis morbi.
+Sed urna nibh donec quis pharetra eros nunc. Nec lacus ut ante dignissim
+pellentesque libero curae sit. Euismod amet massa mollis ac habitasse
+amet. Semper aliquet tincidunt, risus eu vivamus porttitor maecenas
+consequat. Integer iaculis ac habitasse sed, per proin sed donec ut
+finibus tincidunt. Taciti ut et lectus lectus fermentum, praesent in.
+Consequat neque sit arcu, lorem in imperdiet platea egestas at. Lobortis
+magna dui sed, imperdiet vel urna.
 
-Semper primis, tellus vel mi cras sapien elementum, nunc. Mauris
-vehicula tortor class torquent sed scelerisque. Cum nostra in mus orci
-integer aptent non at finibus iaculis. Porttitor ridiculus nam non
-nostra eu lorem ex dolor velit maximus. At turpis egestas suspendisse
-in. Pulvinar ultricies nec et sapien phasellus ut massa conubia.
-Condimentum ut felis fermentum rutrum posuere, venenatis eu himenaeos
-class dis convallis suspendisse libero. Purus ut, nibh pellentesque sed
-nisi suspendisse nisl, ut. Euismod tortor duis libero bibendum sagittis
-id, praesent. Metus amet faucibus, donec lobortis proin scelerisque eget
-massa. Varius rhoncus sed platea, enim quisque. Eu ut class turpis dolor
-egestas est sit diam imperdiet luctus, class. Vitae ac sed dictumst
-turpis maximus pharetra nisi quam. Id nisi ipsum in dis.
+Congue tortor et, enim. Cursus elementum eu in nulla, tellus. Tellus
+cursus nisl consequat nec tempus quam egestas quisque volutpat. Et
+suscipit parturient, facilisis sit habitasse purus ac. Mauris risus.
+Egestas semper aliquam neque eu neque nec sociis tortor facilisi etiam.
+Feugiat, auctor habitant nibh tempus! Erat odio mus, tristique vehicula,
+vehicula nascetur fermentum mi. Luctus mi, orci nascetur ut quis.
+Vestibulum vulputate velit feugiat sem. Nunc sapien ligula nullam mauris
+eros non dapibus sociosqu.
 
 \hypertarget{research-team}{%
 \subsubsection{Research team}\label{research-team}}
 
-Phasellus et, pharetra sodales volutpat ac dis dui ullamcorper curabitur
-elementum. Amet rutrum iaculis at libero eget faucibus facilisi nulla
-porta. At nisl, velit maximus ut non. Accumsan nunc. Nascetur imperdiet
-vestibulum facilisi pulvinar posuere nisl at! Donec vehicula convallis
-curabitur erat nulla lobortis potenti pulvinar. Dolor mauris vehicula
-vitae. Tortor, nulla metus leo nibh suscipit non. Vestibulum facilisis
-sed magna tincidunt vivamus ullamcorper nulla purus. Quam ipsum sapien
-magna non himenaeos, in, mattis nulla ut mauris vel aenean. Dolor
-pellentesque nulla urna erat amet ac nibh pretium, turpis mauris. Sem,
-dui consequat sapien vel, etiam maecenas ligula in. Donec vitae vel
-dapibus et sem amet porttitor volutpat. Tincidunt porta cubilia quisque
-suspendisse eget vestibulum arcu turpis. Ex tortor conubia pharetra
-volutpat amet, donec, sit sit sagittis. Commodo, magnis sociis tempor
-felis facilisis.
+In magna maecenas nostra sed lacinia nec nec. Hac vel ipsum lectus eu
+non metus sagittis sed. Diam sed sagittis eu lacinia sed. Amet sit,
+adipiscing mus aliquam convallis. At, donec dolor sem ac nisl turpis
+vestibulum. Nisi sapien sed non rhoncus non taciti id. Justo, penatibus
+sed sed rutrum egestas proin, odio ac! Ut, tempor nisl id varius metus,
+sollicitudin orci interdum mauris malesuada eu.
 
-Lacus a at in lorem. Nunc sed viverra, porta varius sem et. Dolor tempus
-elementum donec proin sem sed. Eu adipiscing taciti enim in amet ut nec
-cubilia vestibulum. Urna nibh nulla turpis eget vel finibus hendrerit
-nascetur sapien pellentesque suspendisse. Sed in, velit feugiat,
-curabitur. Sem blandit molestie. Ut torquent eget, ut nulla consectetur.
-Consectetur tellus diam aliquam morbi facilisi odio viverra, ac
-facilisis. Nostra nec etiam lacus mus magnis commodo a. Nec sed donec
-praesent nostra et, phasellus.
+Leo laoreet, ullamcorper netus vitae volutpat elementum, donec. Ac
+himenaeos nostra non. Ac justo sem viverra commodo magna. Ridiculus quam
+sollicitudin, quis non. Rutrum enim dapibus sagittis faucibus augue
+ante. Suscipit sed mauris, nec. Et ex amet ante commodo eu leo dis. Est
+sed mi platea.
 
 \hypertarget{preliminary-studies}{%
 \subsubsection{Preliminary studies}\label{preliminary-studies}}
 
-Etiam habitant rhoncus in ridiculus ut integer mauris duis sed, sapien
-aliquet gravida. Amet, nisi elit at efficitur porttitor. Nibh magna sed
-magna praesent, neque. Orci quam dolor erat tincidunt convallis euismod
-non. Porta, sed sollicitudin felis amet vitae. Tempus fringilla massa
-purus ullamcorper scelerisque sollicitudin eget. Sit, sed augue vitae
-sed eget ullamcorper in eu nostra sodales ac et laoreet varius. In
-phasellus eros vestibulum sed a, sed. Nisl, pellentesque ultrices tempus
-nunc eu nec id dapibus pretium. Ac eget, nunc praesent, fames nec sapien
-convallis sagittis non in. Lorem ut sed nec facilisis porta quis at. Non
-orci dolor ut consectetur etiam justo ac sed, semper magna eget.
+Ut vestibulum nullam per id donec maecenas sed. In quam egestas eget,
+laoreet netus cras, pellentesque vestibulum vehicula. Varius, feugiat
+sed integer magnis, odio posuere. Sed maximus congue primis quis non ac.
+Sit at class vitae non vivamus per nullam. Eu justo convallis, sem ut
+eros, justo dis mus platea, ultrices ullamcorper iaculis. Suspendisse
+fermentum in lorem vulputate erat posuere risus cubilia. Conubia aliquam
+vel sociis elementum sed in habitant ipsum curabitur. Ut eros metus.
+Luctus justo ut ex maecenas lorem, dapibus vitae ut.
 
-Luctus vel, mauris, mi ac finibus mi vel per, conubia. Pellentesque
-venenatis urna turpis eu sed feugiat suspendisse quis a porttitor
-gravida. Cras posuere mauris nec fermentum vestibulum conubia. Arcu amet
-bibendum. Penatibus justo aliquet convallis eros varius a mus. Est ut
-sit aliquam libero, et, maximus porttitor nunc lectus. Nostra curae dui
-a diam. Sed in platea varius? Sem diam pharetra suspendisse amet ut
-eleifend. Non maecenas, vestibulum sed a laoreet finibus. Facilisis amet
-hendrerit condimentum justo, vel at ipsum est maecenas. Sapien in urna
-quam ridiculus vestibulum.
+Semper ipsum in hendrerit porta eleifend tellus enim ut. Mi, sed neque
+sed. Fusce etiam primis turpis ad non et aliquet. At eu auctor tristique
+a varius magna malesuada, sed nec. Condimentum mauris fermentum
+ullamcorper sapien ut interdum sed eros volutpat vestibulum. Iaculis
+suspendisse libero litora. Ultricies nulla tincidunt risus nunc donec
+metus nunc. Eleifend ac elementum dis in et torquent. Purus fringilla,
+sociosqu fames tincidunt quisque nunc varius, lectus id et eros. Taciti
+ante vitae ante torquent. Condimentum ultricies elit ut massa mauris.
 
-Senectus nisl ridiculus platea sed ex ac eget, consectetur nisi per ut.
-Diam nisl non class sed elit placerat arcu amet. Tortor aliquam, sit
-fusce egestas ac taciti vestibulum efficitur. Pellentesque cum dictum
-libero sed. In sed eu nostra tempor sem, aptent in. Laoreet, tortor nam.
-Et pulvinar dapibus id egestas ornare suscipit donec nisi condimentum
-nibh? Consectetur ultrices, sapien justo consequat himenaeos ad maximus
-donec. Cursus non sapien non aliquam. Ligula pharetra et congue sociosqu
-per felis sed sem amet sed sed. Sit, non donec.
+Odio ornare tincidunt eget molestie sed tristique efficitur dapibus sem,
+velit morbi mauris. Aenean scelerisque praesent, mus, quam cubilia vel
+ante. Eget lobortis odio duis etiam, nunc. Eu leo ac metus orci tempus.
+Netus, amet libero vel. Vitae imperdiet condimentum, dignissim enim
+morbi fringilla. Porttitor torquent diam maecenas. Dis ultricies nec
+ante nunc pretium. Turpis lectus massa donec proin conubia sodales.
+Vivamus conubia ridiculus. In blandit, mauris ex commodo viverra, lacus
+quis. Sapien erat sociosqu, sed vel quis, auctor sed, risus aptent
+vulputate diam.
 
-Pharetra sodales mauris ut vivamus facilisis. Sit nec massa himenaeos
-vehicula sit. Faucibus tempor nulla non consequat turpis, augue. Justo
-mi quam risus, blandit quis curabitur. Ultrices faucibus eros in
-porttitor blandit cubilia vitae ut velit at montes. Ante et porta,
-fringilla, phasellus donec lobortis. Mauris sed non sed finibus sed.
-Posuere turpis lectus purus senectus pellentesque maximus dolor aptent.
-Ultricies turpis rutrum laoreet proin, risus nisl. Et, interdum eu
-fames. Elit hac tempor velit ante vestibulum dapibus suspendisse. Neque
-fames tortor amet, maecenas lorem primis sit a. Inceptos est fermentum,
-nisl mauris eu, dolor adipiscing lorem nec scelerisque. Nunc et
-venenatis tincidunt eu ultricies rhoncus a pellentesque. Cubilia lacus
-efficitur tortor conubia sed magna praesent ex in.
+Fusce vel phasellus ut conubia tempus id vitae dictumst natoque ut.
+Vitae morbi penatibus libero commodo. Mauris imperdiet odio vitae id
+tempor. Eget primis nunc id justo, consequat condimentum natoque nisl
+aliquam posuere. Torquent platea egestas natoque aptent, vitae
+pellentesque at amet nisi. A vel, arcu ornare a magna dolor elementum
+convallis. Facilisis mattis donec in gravida sit lobortis nunc sed
+tempor. Leo platea laoreet eu placerat blandit convallis ut eleifend.
+Eget tincidunt nec phasellus, nulla risus mus egestas molestie id cursus
+dapibus. Natoque, amet condimentum in eu ut.
 
 \begin{wrapfigure}{R}{0.3\textwidth}
 
@@ -300,104 +291,110 @@ efficitur tortor conubia sed magna praesent ex in.
 \hypertarget{resources}{%
 \subsubsection{Resources}\label{resources}}
 
-Himenaeos duis tempor tellus justo himenaeos etiam sed purus non ad.
-Euismod quis fusce vivamus, neque morbi turpis tempor. Fermentum
-phasellus pharetra dapibus id feugiat non nullam. Felis sagittis
-efficitur pellentesque vel, euismod, at. Tincidunt natoque justo dictum,
-tristique non ridiculus netus purus. Hendrerit, sollicitudin id
-inceptos, maecenas euismod eleifend laoreet ultricies quis suscipit
-vehicula gravida turpis. At nibh egestas rutrum amet ipsum mauris enim
-vehicula maximus finibus vestibulum. Iaculis primis parturient eget, mi,
-at finibus sit? Neque nec tincidunt tortor sed praesent netus. Fusce
-fermentum non montes praesent turpis. Per nulla, integer, non lacus
-vulputate diam lorem tincidunt. Non sem, vel per primis metus volutpat
-nisl? Sed vitae ac platea accumsan sed vel quisque orci sed.
+Fusce, augue eu, ut. Tristique a venenatis eu tincidunt porttitor
+fringilla. At, quisque sociosqu vel vel ut sem ultrices. Faucibus nulla
+diam gravida magna mauris, metus felis non. Arcu curabitur fames justo
+justo nam consectetur, magna sed sem et massa cum, tempor. Nulla, ut
+massa quisque imperdiet, in tempor blandit consectetur sed elementum
+ligula, sit lorem. Ut hendrerit commodo habitant potenti et egestas est
+nullam pharetra pretium. Blandit et interdum, maecenas nec phasellus
+cras sapien sodales malesuada. Montes viverra elit, tristique in fames,
+et. Placerat mauris proin, quis quis, fames. Finibus aliquet, sem in
+augue et diam velit magnis varius enim in. Erat, amet, vel quis, quis
+curabitur urna fringilla fusce at mauris lacus congue.
 
-Imperdiet curabitur bibendum integer auctor, sed, dolor senectus vel
-aliquam et. Lorem sapien placerat pellentesque vestibulum dictumst
-mollis turpis metus. Ac eu montes class sed lacus habitasse sit.
-Pellentesque eros pretium nisl efficitur. Aliquam tellus ante
-ullamcorper sodales dolor vestibulum nec. Erat sed ac sollicitudin nulla
-turpis amet fermentum. Posuere et faucibus elementum integer vivamus.
-Sed eget tempor in nam mattis. Sem nulla lacinia eleifend in diam
-volutpat tincidunt tempor. Sed nec imperdiet libero! Est ligula,
-malesuada ultrices felis eget cubilia.
+Mi nibh porttitor malesuada quisque odio. Duis sem nec justo sit at
+ultrices nulla nulla habitasse mauris. Condimentum egestas sed
+adipiscing, pretium vehicula ultrices odio. Vivamus aenean cum,
+vestibulum, in porttitor taciti eu augue porttitor non. In aliquam
+commodo fringilla ridiculus sapien dictum nisl. Ut rutrum sed aliquet.
+Sit rhoncus fames aliquam vestibulum tellus. Himenaeos interdum tortor
+sed pharetra consectetur nec rutrum, sapien proin ipsum pharetra
+fermentum. Consequat vestibulum, nunc, ante malesuada dui, auctor quam.
+Nec mollis mus sed sit sed sit risus ac nascetur. Mi purus porta tempus
+nunc eu nostra, ultricies vehicula ultrices. Magna sed eleifend pretium
+fusce, in dui maximus.
 
 \hypertarget{design-and-methods-for-aim-1}{%
 \subsubsection{Design and methods for Aim
 1}\label{design-and-methods-for-aim-1}}
 
-Diam mi ligula sapien at imperdiet volutpat neque eros porttitor. Sed at
-ut sapien vestibulum eu aliquam condimentum amet ac facilisis curabitur.
-Sed auctor aliquet habitasse dignissim congue. Montes vel at blandit
-orci sit turpis. Pretium ac morbi dictumst erat ex sollicitudin leo,
-lobortis primis orci ut. Bibendum dignissim nisl dolor elementum
-convallis primis venenatis aenean. Condimentum lectus at ligula sapien
-nunc. Odio duis convallis feugiat, felis ante parturient. Varius vel
-donec cubilia tempus erat nibh porttitor.
+Libero auctor ut nec non tellus rhoncus, eros. Posuere augue nibh et
+interdum tincidunt, ligula conubia cursus eget. Fermentum ut at magnis
+quam tincidunt ligula maximus. Nisl mi, eget commodo quis ipsum eu sed.
+Vestibulum nibh bibendum parturient auctor non mauris pulvinar. Urna
+nostra ad efficitur, non suspendisse sollicitudin est litora magnis
+primis luctus sed. Malesuada gravida vel nec risus. Nostra tempor in
+blandit nibh eros nulla at sit sit. Augue nisl nec a blandit egestas
+duis felis pellentesque pretium est, tempus! Faucibus suspendisse risus
+orci, adipiscing ut vel. Conubia purus dolor ut in montes ex sapien
+orci. Vitae ut nulla ultrices natoque risus quam, eu quisque.
 
-Tellus laoreet euismod, mi ad congue urna adipiscing. Pellentesque
-bibendum tincidunt ullamcorper nullam curabitur quis egestas montes
-maximus, habitasse ac. Semper lacinia volutpat dictum nullam mus
-scelerisque porttitor nec sapien nullam. Integer magna, sit dis integer,
-quam, rhoncus fringilla leo. Accumsan magnis et sem varius fames ut.
-Facilisi dignissim, tristique id ultricies in, sit velit sapien, conubia
-vitae. Nec velit ac hendrerit maximus sollicitudin, hendrerit gravida
-suspendisse. In phasellus maximus, parturient semper nisl interdum.
-Hendrerit at sem turpis ultricies vestibulum sed nulla egestas sit eu
-vehicula. Fermentum sed ut est nulla, sed tortor. Libero mollis quisque
-ipsum luctus at natoque per cursus velit tortor vel mollis.
+Penatibus nec magnis dictum fames eget egestas at neque. Luctus,
+eleifend sed dignissim nec. In ipsum est facilisis aenean amet. Ut
+risus, iaculis parturient sed dolor. Hac, senectus in vulputate, at ex,
+inceptos per consectetur, massa eget ac facilisis sit. Praesent nisi
+vestibulum ex sapien sit porta ullamcorper ultricies non aptent.
+Pellentesque potenti eleifend felis euismod purus! Mollis rutrum a nec
+mauris quam augue laoreet curabitur dictum neque ullamcorper ut varius.
+Urna leo duis. Lorem ullamcorper ullamcorper tortor mauris velit in
+velit curae. Felis facilisi consequat enim eu, tempus.
 
 \hypertarget{design-and-methods-for-aim-2}{%
 \subsubsection{Design and methods for Aim
 2}\label{design-and-methods-for-aim-2}}
 
-Et dui, consequat venenatis sed, volutpat viverra. At molestie
-scelerisque sed rhoncus ligula, est eget. Proin scelerisque condimentum
-duis egestas placerat nam turpis. In nunc integer tempor egestas. Mi, et
-id est integer euismod class eleifend. In vestibulum, erat, taciti
-pharetra, donec. Amet condimentum vestibulum molestie nam fermentum cras
-placerat finibus est. Nisi lacinia sit mollis ut pharetra sociosqu.
-Nulla a nec eget in at venenatis habitasse, feugiat condimentum. Sit
-purus lorem malesuada rutrum sed ipsum sodales ac, mauris, viverra
-aliquam nisl. Lacinia potenti suscipit sagittis est ultrices, duis
-ridiculus.
+Sagittis ac risus quam condimentum ultricies etiam tristique ac?
+Parturient tincidunt ut iaculis quam lorem sit etiam. Aliquam fusce
+aenean sed, egestas urna ultricies dis. Neque, habitasse sollicitudin
+praesent nibh dolor auctor. Vel non commodo nisl semper nam risus amet
+ut porta commodo sed lacus congue. Ridiculus, nisi etiam proin. Egestas
+hendrerit, dolor conubia cursus non morbi tortor eu aliquam laoreet.
+Nisl ultrices velit eu mi faucibus magna nascetur. Tellus scelerisque,
+vulputate, vitae, sed. Et sed a cursus arcu ut mauris felis donec nulla.
+Augue praesent pretium a amet mattis habitant sed vestibulum. Aliquam mi
+magna conubia in id fames ut volutpat at amet amet fringilla adipiscing.
+Libero aenean quam lacinia ante per, ante. A sem nibh, praesent potenti
+accumsan vel.
 
-In curabitur arcu fames lectus, dictum sollicitudin duis nec, faucibus
-at. Phasellus ipsum, torquent enim vivamus mauris amet integer mi
-aliquet. Aliquam inceptos libero vel, porta laoreet lacinia vel duis
-posuere penatibus. Interdum tellus a, at varius molestie dictum nec
-rutrum, turpis tempor facilisis. Ut malesuada ac dignissim malesuada.
-Magnis pretium ante, neque risus lacinia lacus. Vel suspendisse lorem.
-Dictum nulla semper ultrices in mauris nisi adipiscing molestie id
-dictumst. Justo in enim ut laoreet odio massa dapibus nam semper sed.
-Placerat ut hendrerit ligula purus, amet in. In eu, ac sed suspendisse
-ut ante.
+Et neque dapibus habitant. Interdum libero libero malesuada blandit
+lorem sapien sed, eget urna dolor. Ut id ac mi auctor velit gravida
+inceptos. Curabitur nisl imperdiet dolor nisl aliquam congue class
+ligula proin. Per nullam dolor in. Mauris vitae ante a nec ipsum natoque
+inceptos nascetur, massa velit, aenean dapibus. Phasellus dolor lobortis
+est, tellus ad quam congue, nullam. Finibus eget eu amet sed orci lorem.
+Purus torquent venenatis in quam, nostra eleifend eget suspendisse.
+Lorem, tellus consectetur justo dis odio sed, eget cubilia eget risus.
+Egestas lacus quis fames orci vel. Augue augue purus, sed curae torquent
+malesuada pretium. Lacus nec, sed sit, egestas magnis sed duis maecenas
+ac montes.
 
 \hypertarget{design-and-methods-for-aim-3}{%
 \subsubsection{Design and methods for Aim
 3}\label{design-and-methods-for-aim-3}}
 
-Ultricies, eget aenean consectetur nisl egestas, magna aptent felis. Nec
-egestas netus sed rhoncus himenaeos faucibus augue eleifend. Imperdiet
-ut quam mauris sit vestibulum maximus. Sociis accumsan cras quam
-malesuada. Efficitur aliquet varius placerat. Justo fames ut in,
-pharetra. Pharetra at et condimentum quisque porta nibh vel nullam.
-Habitant conubia id lacus pharetra libero faucibus consequat, nec, mi in
-neque non purus viverra fermentum. Ante in vitae sed et ac, potenti
-fringilla lobortis. Pellentesque turpis iaculis in, habitasse porta
-malesuada efficitur. Volutpat nec felis nulla, ut, nunc gravida tellus
-non. Bibendum ornare sed sodales nulla scelerisque nostra.
+Vel lectus adipiscing iaculis enim phasellus sed, sit convallis.
+Curabitur, mi quis vivamus nec, aliquam porta eu lobortis montes integer
+est. Massa elementum maecenas nulla posuere interdum ad rhoncus. Ut a
+maecenas at sodales aenean eros ut morbi varius. Lectus suscipit
+ullamcorper faucibus at mi ac pellentesque eros facilisi. Sit iaculis
+sed malesuada tempor, sollicitudin volutpat risus lobortis suspendisse.
+Erat at ipsum commodo duis fermentum risus luctus cras luctus. Non duis
+pharetra. Dis ipsum dis, nunc vitae nam semper natoque ut aliquam in ut
+auctor maecenas, felis quisque posuere.
 
-Ut nunc non nunc erat, nec placerat sodales sed sed sapien. Lacinia,
-egestas sociosqu lorem sem. Placerat integer, ligula risus in curae
-maecenas erat venenatis facilisis. Phasellus ac eleifend in nibh potenti
-aliquam aptent. Ut velit pretium cras maximus nisi nisl tincidunt. Sed
-cursus in sed sagittis eros sit, venenatis dictumst feugiat. Aenean
-vitae dignissim dictum enim cursus, ex nibh lectus. Ipsum nisl nec sed
-tortor, eros aenean turpis aliquam, etiam primis magnis porttitor id.
-Quisque mi sit aenean faucibus ut purus non vel! Et, sed amet ante
-dignissim mauris tempus. Ornare conubia lectus mus ante.
+Mollis finibus mi urna ac arcu in sociis donec facilisis, ac, nullam
+convallis. Elementum metus interdum porta ut nibh urna. Tortor, sed
+feugiat commodo tempor pretium class habitant, phasellus per. Commodo at
+inceptos, non sed aliquet. Accumsan eu dignissim velit vestibulum congue
+fusce. Augue sodales lorem in turpis, nibh. A, vitae nisi et egestas vel
+pretium ut libero lacinia quam. Ut sagittis vitae iaculis aenean montes
+in, placerat mauris feugiat ridiculus. Sed nec cras mauris vel arcu,
+pulvinar, taciti, mattis tempus, in ad. Bibendum egestas semper cum
+pharetra libero. Himenaeos auctor porta vestibulum. Inceptos orci nibh,
+sit mattis non in leo non, non. Vivamus aliquam ex purus ut sed, non?
+At, porta, ac tellus eu dictum parturient leo. Justo amet condimentum
+nulla sed nibh elementum, a leo pulvinar.
 
 \hypertarget{timeline}{%
 \subsubsection{Timeline}\label{timeline}}
@@ -414,38 +411,44 @@ package.
 \subsubsection{Rigor and
 reproducibility}\label{rigor-and-reproducibility}}
 
-Dapibus vitae turpis sodales montes id. Sed ultrices nibh magnis,
-suscipit quam libero porta. Ante venenatis, in ligula donec eros in.
-Pellentesque curabitur ligula eu enim potenti in a, eleifend malesuada
-quisque sed, lobortis interdum. Tortor tortor sit nulla et quis
-phasellus nulla, convallis hac curabitur velit. Vel nulla. Ut at
-placerat quisque feugiat. Donec, quis, posuere lorem sed, nunc risus.
-Lorem tincidunt ante lacinia class massa at facilisi efficitur mi. Vitae
-ipsum vel tellus id at nullam commodo posuere pretium in.
+Non sed turpis maximus molestie molestie et. Viverra tincidunt donec
+rutrum ut tortor ad non elit. Sagittis tincidunt lectus et odio
+vestibulum. Risus condimentum gravida id dapibus mauris hac torquent.
+Mauris dis elit et himenaeos in elementum vestibulum. Mi blandit nec
+integer efficitur volutpat lobortis enim. Orci auctor maecenas in,
+rutrum, nisl dui odio non. Vestibulum sagittis ultrices elementum
+fermentum nibh, ac, iaculis iaculis ipsum phasellus in? Et et ultrices
+cras quis curae. Amet cubilia, scelerisque eu hac faucibus dictum eget.
 
-Molestie in sed sagittis faucibus. In mauris viverra proin fringilla.
-Facilisi proin tincidunt consectetur risus sed. Iaculis hac non platea
-faucibus. Blandit a porta, vestibulum amet. Ac sed felis metus ante hac
-fermentum netus sit. Orci accumsan hac quisque scelerisque, finibus non
-vitae interdum penatibus mattis ornare. Vitae cursus ut sed tellus ut.
-Netus sit sed est. Bibendum sit commodo luctus ante orci molestie lacus,
-tortor. Ligula posuere faucibus. Rhoncus nec at arcu efficitur vitae,
-mattis nunc! Vitae sed ac.
+Velit nam sed molestie, netus libero parturient nisl curabitur,
+vestibulum sed, faucibus lectus. Efficitur est et vitae egestas mauris
+mauris. Sociis mauris senectus at risus non ridiculus facilisis sodales
+purus. Sit ultricies sed gravida sed dolor nunc lobortis nunc. Eget
+laoreet nec malesuada efficitur. Mi fames nec nunc malesuada parturient,
+suspendisse enim mauris sed. Nam, quis vitae, est commodo! Quis
+facilisis egestas et et, id dictum quam. Amet a viverra et urna
+placerat, sagittis primis vivamus nulla id eu. Accumsan, feugiat sed
+amet. Vestibulum sem, facilisis ut mi in integer, et vestibulum velit.
+Porttitor sed vehicula orci sit imperdiet. Nisl erat, a in euismod vitae
+a eros magna et praesent et.
 
 \hypertarget{impact-of-the-proposed-study}{%
 \subsubsection{Impact of the proposed
 study}\label{impact-of-the-proposed-study}}
 
-Auctor et id sit justo, primis ut fermentum pellentesque arcu. Ipsum
-feugiat in venenatis nec dictum purus dolor sed diam. Eget suspendisse,
-sit ut, pellentesque id, lobortis, semper. Dis aliquet in sollicitudin
-sollicitudin neque dis commodo aenean dictum tincidunt. Arcu sociosqu ac
-tempus, fermentum hendrerit at aliquam ante tortor nullam. Fringilla
-dignissim sodales a tristique quis mus nullam sem. Sit primis tortor
-quam viverra. Libero eget, sed sed quisque metus. Ullamcorper mi ut eu
-congue risus nec ante augue. Pretium nulla facilisi posuere ligula,
-etiam vitae donec sit est ut nunc, ipsum accumsan eros. In nulla donec
-in quis est elementum vel nec leo metus interdum ut.
+Malesuada justo laoreet etiam. Nec, ut nec non nec ac ultricies
+ultricies urna. Nec erat, vitae velit, non sed congue in velit et
+quisque. Tortor velit vestibulum, tellus netus. Sit felis sem at sem
+velit, non ligula. Quis tristique tincidunt tempus, et vehicula
+ultricies suscipit. Non amet in eu bibendum a quis. Sed ultricies, augue
+natoque sem, molestie ad ut senectus porta purus. Vestibulum sed
+maecenas at montes quam aenean eget mauris, fames sed ultricies.
+Lobortis suspendisse id at sagittis libero erat posuere. Dolor tempor
+odio pretium maximus nulla malesuada nisl. Arcu sagittis mattis magna
+eu, non orci rutrum. Ultrices rutrum facilisis taciti, sagittis
+phasellus a scelerisque diam faucibus. Ut vestibulum maecenas enim
+inceptos hac luctus velit. Odio eget platea ultrices habitasse sociosqu
+lectus integer leo.
 
 \bibliography{references.bib}
 
