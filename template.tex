@@ -259,12 +259,6 @@ $endfor$
 %\usepackage{helvet}
 %\renewcommand{\familydefault}{\sfdefault}
 
-% un-indent the section titles correct their padding
-% reduce spacing that appears above level 3 and 4 headings
-% \usepackage{titlesec}
-
-% \titlespacing*{\section}{-1em}{0pt}{6pt}
-% \titlespacing*{\subsubsection}{0pt}{4pt}{0pt}
 % \titlespacing*{\paragraph}{0pt}{2pt}{1em}
 
 % set section numbering/lettering
@@ -280,21 +274,26 @@ $endfor$
   \renewcommand\section{
   \@startsection{section}{1}{\z@}
     {-3.5ex \@plus -1ex \@minus -.2ex}
-    {1.0ex \@plus.2ex} %reduce space below section
+    {1.0ex \@plus.2ex} %reduce space below section (was 1.5ex)
     {\normalfont\normalsize\bf\uppercase}} %modify font style
     
   \renewcommand\subsection{
   \@startsection{subsection}{2}{\z@}
-    {-3.25ex\@plus -1ex \@minus -.2ex}
-    {1.5ex \@plus .2ex}
+    {-1.5ex\@plus -1ex \@minus -.2ex}%reduce space above subsection (was -3.25ex)
+    {0.5ex \@plus .2ex}%reduce space below subsection (was 1.5ex)
     {\normalfont\normalsize\bf}} %modify font style
     
   \renewcommand\subsubsection{
   \@startsection{subsubsection}{3}{\z@}
-    {-3.25ex\@plus -1ex \@minus -.2ex}
-    {1.5ex \@plus .2ex}
+    {-1.0ex\@plus -1ex \@minus -.2ex}%reduce space above subsubsection (was -3.25ex)
+    {0.5ex \@plus .2ex}%reduce space below subsubsection (was 1.5ex)
     {\normalfont\normalsize\bf}} %modify font style
     
+  \renewcommand\paragraph{
+  \@startsection{paragraph}{4}{\z@}
+    {-1.0ex\@plus -1ex \@minus -.2ex}%reduce space above paragraph (was -3.25ex)
+    {-1.5ex \@plus .2ex}%convert space below paragraph to an indent (was 1.5ex)
+    {\normalfont\normalsize\bf}} %modify font style    
 \makeatother
 
 \renewcommand\thesubsection{\Alph{subsection}.}
@@ -307,7 +306,6 @@ $endfor$
 % allow text to wrap around figures
 \usepackage{graphicx}
 \usepackage{wrapfig}
-
 
 %%%%%%%%%%
 
